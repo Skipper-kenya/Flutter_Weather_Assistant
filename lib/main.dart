@@ -4,9 +4,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:weather_mailer/routes/RouteConfigurator.dart';
 import 'package:weather_mailer/MainAssistants/weather_body.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  dotenv.load(fileName: ".env");
+void main()  {
+
   runApp(const MaterialApp(
     initialRoute: '/loading',
     onGenerateRoute: Routeconfigurator.configureRoutes,

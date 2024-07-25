@@ -14,7 +14,6 @@ class CreateLocationWeather {
   String flag = "";
 
 
-  final String? apiKey = dotenv.env["WEATHER_API"]!;
 
 
   CreateLocationWeather({required this.location, required this.flag});
@@ -24,7 +23,7 @@ class CreateLocationWeather {
 
     try {
       Uri uri = Uri.parse(
-          "https://api.openweathermap.org/data/2.5/weather?units=metric/&appid=$apiKey&q=$location");
+          "https://api.openweathermap.org/data/2.5/weather?units=metric/&appid=&q=$location");
 
       Response response = await get(uri);
       Map data = jsonDecode(response.body);
